@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+		<script src="../../template/js/head.js"></script>
+		<link href="../../template/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="app-style" />
+		<link href="../../template/css/app.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../template/css/icons.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="app-menu">
+                <div class="logo-box">
+                    <a href="index.html">
+                           <center><img src="https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png" class="w-50" alt=""></center>
+                    </a>
+                </div>
+                <div class="scrollbar">
+                    <div class="text-center">
+                        <div class="dropdown">
+                            <a id="objAdmi" href="javascript: void(0);" class="dropdown-toggle h5 mb-1 d-block" data-bs-toggle="dropdown">Robinson Cortes</a>
+                        </div>
+                        <p class="text-muted mb-0">Administrador</p>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-title">Acciones</li>
+                        <li class="menu-item">
+                            <a href="./../index.html" class="menu-link">
+                                <span class="menu-icon"><i data-feather="airplay"></i></span>
+                                <span class="menu-text"> Escritorio </span>
+                            </a>
+                        </li>
+                        <!-- Administradores-->
+                        <li class="menu-item">
+                            <a href="./../admins/index.html" class="menu-link">
+                                <span class="menu-icon"><i data-feather="users"></i></span>
+                                <span class="menu-text"> Administradores </span>
+                            </a>
+                        </li>
+                        <!-- Marcas-->
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <span class="menu-icon"><i data-feather="activity"></i></span>
+                                <span class="menu-text"> Marcas </span>
+                            </a>
+                        </li>
+                          <!-- Pqrs-->
+                          <li class="menu-item">
+                            <a href="./../pqrs/index.html" class="menu-link">
+                                <span class="menu-icon"><i data-feather="message-square"></i></span>
+                                <span class="menu-text"> PQRS </span>
+                            </a>
+                        </li>
+
+                        <li class="menu-item">
+                            <a href="./brands/index.html" class="menu-link text-danger">
+                                <span class="menu-icon"><i class="fe-log-out"></i></span>
+                                <span id="cerrarSesionBtn" onclick="cerrarSesion()" class="menu-text"> Cerrar sesión </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="content-page">
+                <div class="content">
+                    <div class="container-fluid mt-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                           Crear nueva marca
+                                          </button>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-hover table-striped">
+                                                <thead>
+                                                    <tr class="bg-secondary text-white">
+                                                        <th>ID</th>
+                                                        <th>LOGO</th>
+                                                        <th>NOMBRE</th>
+                                                        <th>LOCAL</th>
+                                                        <th>PISO</th>
+                                                        <th>HORARIOS</th>
+                                                        <th>SITIO WEB</th>
+                                                        <th>ACCIONES</th>
+                                                    </tr>
+                                                </thead>
+                                                
+                                                    <tr>
+                                                        
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td></td>
+                                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                                        <td></td>
+                                                        <td>
+                                                        
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-info">Buscar</button>
+                                                
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        
+                                                        <td>ff16</td>
+                                                        <td><img width="100px" src="https://demodaoutlet.com/wp-content/uploads/2023/06/totto-medellin.jpg" alt=""></td>
+                                                        <td>Totto</td>
+                                                        <td>127</td>
+                                                        <td>1</td>
+                                                        <td>
+                                                            Lunes - sábado: 10:00 a.m. - 7:00 p.m.  <br>
+                                                            Domingos y festivos: 10:00 a.m. - 6:00 p.m.
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://google.com">Sitio web</a>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-info">Detalles</button>
+                                                            <button class="btn btn-sm btn-warning">Editar</button>
+                                                            <button class="btn btn-sm btn-danger">Eliminar</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tbody id="tbody">
+                                                        <tr>
+
+                                                        </tr>
+                                                    </tbody>
+
+                                                    
+                                               
+                                            </table>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>Muchos exitos :)</div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+      <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Marca</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="">Nombre de la marca: </label>
+            <input  id="name" type="text" ><br><br>
+            <label for="">Numero del local: </label>
+            <input  id="local" type="text" ><br><br>
+            <label for="">Numero de Piso: </label>
+            <input  id="floor" type="text" ><br><br>
+            <label for="">Horarios: </label>
+            <input  id="schedule" type="text" ><br><br>
+            <label for="">Sitio web: </label>
+            <input  id="website" type="text" ><br><br>
+            <label for="">Logo: </label>
+            <input  id="logo" type="file" >
+        
+
+        </div>
+        
+
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button onclick="new_brands()" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+
+
+  <tbody id="tmodal">
+    
+</tbody>
+
+
+
+        <script src="../../template/js/vendor.min.js"></script>
+        <script src="../../template/js/app.min.js"></script>
+        <script>
+
+let admiData = localStorage.getItem("admi");
+        let cerrarSesionBtn = document.getElementById("cerrarSesionBtn");
+        
+        if (admiData) {
+            
+            let AdmiObject = JSON.parse(admiData);
+
+           
+            let nombreAdmi = AdmiObject.nameAdmi;
+
+           
+            document.getElementById("objAdmi").textContent = nombreAdmi;
+        }
+        function cerrarSesion() {
+            // Limpiar localStorage
+            localStorage.clear();
+
+            // Redirigir a la página principal
+            location.href = "../../../../index.html";
+
+
+
+
+        }
+
+
+            
+            function new_brands(){
+
+           let new_brand = {
+                    name:document.getElementById('name').value,
+                    local:document.getElementById('local').value,
+                    floor:document.getElementById('floor').value,
+                    schedule:document.getElementById('schedule').value,
+                    website:document.getElementById('website').value,
+                   logo:document.getElementById('logo').value
+                    
+                }
+            
+                fetch("http://localhost:3000/brands", {
+                   
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body:JSON.stringify(new_brand)
+                }).then(r => r.json()).then(d=>{
+                
+                    
+                })
+
+
+            }
+
+            
+            tbody = document.getElementById('tbody')
+template = "";
+fetch("http://localhost:3000/brands").then(r => r.json()).then(d => {
+    d.forEach(function (element) {
+        template += `
+            <tr>
+                <td id="${element.id}">${element.id}</td>
+                <td><img width="100px" src="${element.logo}" alt=""></td>
+                <td>${element.name}</td>
+                <td>${element.local}</td>
+                <td>${element.floor}</td>
+                <td>${element.schedule}</td>
+                <td> <a href="${element.website}">${element.website}</a></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-info">Detalles</button>
+                    <button onclick="createModal() " type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                     Editar
+                    </button>
+                    
+                    <button onclick="destroy('${element.id}')" type="button" class="btn btn-sm btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        `;
+    });
+    
+    tbody.innerHTML = template;
+})
+
+    
+function createModal(id) {
+  // Crear el div del modal con sus clases y atributos
+
+  
+  var modalDiv = document.createElement('div');
+  modalDiv.className = 'modal fade';
+  modalDiv.id = 'exampleModal2';
+  modalDiv.tabIndex = '-1';
+  modalDiv.setAttribute('aria-labelledby', 'exampleModalLabel');
+  modalDiv.setAttribute('aria-hidden', 'true');
+
+  // Crear la estructura interna del modal con sus clases y elementos
+  fetch("http://localhost:3000/brands").then(r => r.json()).then(d => {
+    d.forEach(function (element) {
+    modalDiv.innerHTML = `
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="">Nombre de la marca: </label>
+          <input  id="name2" type="text" ><br><br>
+          <label for="">Numero del local: </label>
+          <input  id="local2" type="text" ><br><br>
+          <label for="">Numero de Piso: </label>
+          <input  id="Piso2" type="text" ><br><br>
+          <label for="">Horarios: </label>
+          <input  id="horarios2" type="text" ><br><br>
+          <label for="">Sitio web: </label>
+          <input  id="web2" type="text"  ><br><br>
+          <label for="">Logo: </label>
+          <input  id="logo2" type="file" >
+        </div>
+        <div class="modal-footer">
+          <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button onclick="update('${element.id}')" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+
+  // Agregar el modal al body del documento
+  document.body.appendChild(modalDiv);
+  })
+  
+
+  
+})
+}
+
+
+
+    function update(id) {
+    let update_brand = {
+        id:id,
+        name: document.getElementById('name2').value,
+        local: document.getElementById('local2').value,
+        floor: document.getElementById('Piso2').value,
+        schedule: document.getElementById('horarios2').value,
+        website: document.getElementById('web2').value
+    };
+
+    fetch("http://localhost:3000/brands/" + id, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(update_brand)
+    }).then(r => r.json())
+    .then(data => {
+    
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
+        function destroy(id) {
+          
+            fetch("http://localhost:3000/brands/"+id, {
+                  
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(r => r.json()).then(d=>{
+            })
+        }
+    
+               
+                    
+                
+        
+
+    
+
+
+            
+            
+
+
+         
+
+            
+
+            
+        </script>
+    </body>
+</html>

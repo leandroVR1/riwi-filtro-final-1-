@@ -1,0 +1,56 @@
+{
+  "admins": [
+    {
+      "id": "ff15",
+      "nameAdmi": "Admin Outlet",
+      "emailAdmi": "admin@outlet.com",
+      "passwordAdmi": "password"
+    }
+  ],
+  "brands": [
+    {
+      "id": "fs13",
+      "name": "Tostao",
+      "local": "122",
+      "floor": "1",
+      "schedule": [
+        "lunes-domingo:8:00am-8:00pm"
+      ],
+      "logo": "https://i.ibb.co/yXpRZ26/logo-tostao.jpg",
+      "website": "wwww.Tostao.com",
+      "description": "Consigue un buen desayuno"
+    },
+    {
+      "id": "er13",
+      "name": "Riwi",
+      "local": "322",
+      "floor": "3",
+      "schedule": [
+        "lunes-viernes:6:00am-10:00pm"
+      ],
+      "logo": "https://i.ibb.co/F88DbXS/logo-riwi.png",
+      "website": "wwww.Riwi.com",
+      "description": "Sumergete en el mundo de la programacion"
+    },
+    {
+      "id": "25ea",
+      "name": "a",
+      "local": "a",
+      "floor": "a",
+      "schedule": "a",
+      "website": "a",
+      "logo": "C:\\fakepath\\Screenshot from 2023-11-17 14-58-59.png"
+    }
+  ],
+  "pqr": [
+    {
+      "id": "0f77"
+    },
+    {
+      "id": "2ac7",
+      "type": "Queja",
+      "mensage": "koiioio",
+      "emailpqr": "estudiante@gmail.com"
+    }
+  ]
+}
